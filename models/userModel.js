@@ -2,15 +2,19 @@ const mongoose=require("mongoose");
 
 
 const userSchema=new mongoose.Schema({
-    name: {
+    userid: {
         type: String,
         required: true
     },
-    email: {
+    roomid: {
         type: String,
         required: true
     },
-    password: {
+    tournamenttype: {
+        type: String,
+        required: true
+    },
+    tournamentprice: {
         type: String,
         required: true
     }

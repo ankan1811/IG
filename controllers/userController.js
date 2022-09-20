@@ -13,14 +13,16 @@ const getallUsers=async(req,res)=>{
     }
 const saveUser=async(req,res)=>{
     try{
-    const name=req.body.name;
-    const email=req.body.email;
-    const password=req.body.password;
+    const userid=req.body.userid;
+    const roomid=req.body.roomid;
+    const tournamenttype=req.body.tournamenttype;
+    const tournamentprice=req.body.tournamentprice;
     
     const newUser=new User({
-        name:name,
-        email:email,
-        password:password
+        userid:userid,
+        roomid:roomid,
+        tournamenttype:tournamenttype,
+        tournamentprice:tournamentprice
     });
     const savedUser =await newUser.save();
     res.json(savedUser);
